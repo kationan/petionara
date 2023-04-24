@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\CotisationController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,4 +25,7 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+    Route::get("/dashboard/cotisations", [CotisationController::class, 'index'])->name('dashboard_cotisations');
+    Route::get("/new-transaction-request", [CotisationController::class, 'newTransaction'])->name('newTransactionRequest');
 });
+

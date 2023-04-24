@@ -6,9 +6,9 @@
                 <h1 class="text-3xl text-center">ADHESION</h1>
             </div>
         </a>
-        <a href="/" class="w-full hover:opacity-60 text-white h-32  items-cente">
+        <a href="{{route('dashboard_cotisations')}}" class="w-full hover:opacity-60 text-white h-32  items-cente">
             <div class=" grid grid-cols-1 gap-4 content-center border-2 h-32 hover:opacity-100 bg-cyan-600">
-                <h1 class="text-3xl text-center">Cotisations</h1>
+                <h1 class="text-3xl text-center">COTISATION</h1>
             </div>
         </a>
         <a class="w-full hover:opacity-60 text-white h-32 items-center  cursor-pointer">
@@ -18,7 +18,7 @@
         </a>
         <a href="/" class="w-full hover:opacity-60 text-white h-32  items-cente">
             <div class="grid grid-cols-1 gap-4 content-center  text-center border-2 h-32 bg-orange-600 hover:opacity-100 ">
-                <h1 class="text-3xl text-center">Cotisations</h1>
+                <h1 class="text-3xl text-center">COTISATION</h1>
             </div>
         </a>
         <a class="w-full hover:opacity-60 text-white h-32 items-center  cursor-pointer">
@@ -28,7 +28,7 @@
         </a>
         <a href="/" class="w-full hover:opacity-60 text-white h-32  items-cente">
             <div class="grid grid-cols-1 gap-4 content-center  text-center border-2 h-32 hover:opacity-100 bg-red-600">
-                <h1 class="text-3xl text-center">Cotisations</h1>
+                <h1 class="text-3xl text-center">COTISATION</h1>
             </div>
         </a>
     </div>
