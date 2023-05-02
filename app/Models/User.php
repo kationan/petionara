@@ -9,6 +9,10 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use App\Models\Role;
+use App\Models\Cotisation;
+
 
 class User extends Authenticatable
 {
@@ -28,7 +32,8 @@ class User extends Authenticatable
         'email',
         'prenom',
         'contact',
-        'pays_id',
+        'pays',
+        'ville',
         'fonction',
         'password',
     ];
@@ -62,4 +67,12 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+    public function roles():BelongsToMany
+    {
+        return $this->belongsToMany(Role::class, "user_role", "user_id", "role_id");
+    }
+    public function cotisations():hasMany
+    {
+        return $this->hasMany(Cotisation::class);
+    }
 }

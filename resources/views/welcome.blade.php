@@ -8,9 +8,7 @@
 
         <link rel="preconnect" href="https://fonts.bunny.net">
         {{-- <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" /> --}}
-        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script src="https://cdn.cinetpay.com/seamless/main.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
         @vite('resources/css/app.css')
         
     </head>
@@ -20,6 +18,8 @@
             @livewire('header')
            @livewire('content')
         </div>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     </body>
 </html>
 
