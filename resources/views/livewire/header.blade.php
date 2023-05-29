@@ -1,5 +1,5 @@
 <div class="bg-white">
-  <header class="absolute inset-x-0 top-0 z-50 sm:fixed sm:top-0 sm:right-0 p-0 md:p-6  text-right">
+  <header class="absolute inset-x-0 top-0 z-50 sm:fixed sm:top-0 sm:right-0 p-0  text-right">
     <nav class="md:flex bg-white shadow md:items-center justify-between p-6 lg:px-8" aria-label="Global">
       <div class="flex lg:flex-1 justify-between items-center">
         <a href="#" class="-m-1.5 p-1.5">
@@ -74,7 +74,7 @@
             hover:duration-0 hover:translate-x-5
           duration-500">Status et reglements</a>
         </li>
-        @if (Route::has('login'))
+        {{-- @if (Route::has('login'))
         <li>
           @auth
             <a href="{{ url('/dashboard') }}" class="font-semibold text-gray-600 hover:text-gray-900 focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Dashboard</a>
@@ -85,7 +85,7 @@
             @endif
           @endauth
           </li>
-        @endif
+        @endif --}}
       </ul>
       </div>
     </nav>
@@ -114,4 +114,14 @@
   //     dropdowns.classList.add('hidden')
   //   }
   // }
+  
+    window.addEventListener('scroll', function() {
+        var nav = document.querySelector('nav'); // Sélectionnez votre élément de navigation
+
+        if (window.pageYOffset > nav.offsetTop) {
+            nav.classList.add('sticky'); // Ajoutez la classe "sticky" lorsque vous faites défiler vers le bas
+        } else {
+            nav.classList.remove('sticky'); // Supprimez la classe "sticky" lorsque vous remontez en haut de la page
+        }
+        });
 </script>
